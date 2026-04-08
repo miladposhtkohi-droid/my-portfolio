@@ -1,0 +1,33 @@
+.home {
+  background: #0f0f14;
+  color: #dcdcdc;
+  padding: 40px 80px;
+}
+
+/* Sektioner */
+.home section {
+  margin-top: 80px;
+  max-width: 900px;
+}
+
+.home h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.home p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #b8b8b8;
+}
+
+.values ul {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.values li {
+  margin-bottom: 8px;
+  color: #dcdcdc;
+}

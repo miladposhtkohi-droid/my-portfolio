@@ -1,0 +1,32 @@
+.skills-page {
+  background: #0f0f14;
+  color: #dcdcdc;
+  padding: 60px 80px;
+  min-height: 100vh;
+}
+
+.skills-page h1 {
+  font-size: 2.6rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.skills-section {
+  margin-bottom: 60px;
+}
+
+.skills-section h2 {
+  font-size: 1.8rem;
+  color: #c7b3ff;
+  margin-bottom: 16px;
+}
+
+.skills-section ul {
+  padding-left: 20px;
+}
+
+.skills-section li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #dcdcdc;
+}
