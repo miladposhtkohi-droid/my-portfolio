@@ -29,8 +29,9 @@
 /* ===== IMAGE BOX ===== */
 .contact-image-box {
   flex: 1;
-  min-width: 240px;
+  min-width: auto;
   max-width: 320px; /* Mindre bild */
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -153,6 +154,10 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .contact-page {
+    padding: 60px 24px;
+  }
+
   .contact-container {
     flex-direction: column;
     align-items: center;
@@ -171,7 +176,7 @@
   }
 
   .contact-image-box {
-    max-width: 380px;
+    max-width: 420px;
   }
 }
 

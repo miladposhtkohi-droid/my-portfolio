@@ -71,3 +71,31 @@
 .skill-card:hover .skill-icon {
   transform: scale(1.2);
 }
+
+@media (max-width: 768px) {
+  .skills-page {
+    padding: 50px 20px;
+  }
+
+  .skills-wrapper {
+    max-width: 100%;
+  }
+
+  .skills-header h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-page {
+    padding: 36px 16px;
+  }
+
+  .category-title {
+    font-size: 1.6rem;
+  }
+
+  .skills-list {
+    gap: 14px;
+  }
+}

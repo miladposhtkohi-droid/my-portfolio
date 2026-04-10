@@ -17,6 +17,12 @@ body {
   overflow-x: hidden; /* Fixar att navbaren inte sticker ut */
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ===========================
    LAYOUT WRAPPER
 =========================== */
@@ -80,6 +86,14 @@ section {
 @media (max-width: 480px) {
   section {
     padding: 30px 16px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
   }
 
   p {

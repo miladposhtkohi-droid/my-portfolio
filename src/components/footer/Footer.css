@@ -59,3 +59,25 @@
   font-size: 0.9rem;
   color: #8a8a8a;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-links,
+  .footer-socials {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 16px;
+  }
+
+  .footer-top h3 {
+    font-size: 1.5rem;
+  }
+}

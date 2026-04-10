@@ -31,3 +31,27 @@
   margin-bottom: 8px;
   color: #dcdcdc;
 }
+
+@media (max-width: 768px) {
+  .home {
+    padding: 30px 20px;
+  }
+
+  .home section {
+    margin-top: 40px;
+  }
+
+  .home h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 24px 16px;
+  }
+
+  .home h2 {
+    font-size: 1.6rem;
+  }
+}
