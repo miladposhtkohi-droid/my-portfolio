@@ -51,7 +51,9 @@
   object-fit: cover;
 
   /* Smooth hover-effekt */
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .contact-image-box img:hover {
@@ -165,3 +167,26 @@
   }
 }
 
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 40px 16px;
+  }
+
+  .contact-container {
+    gap: 24px;
+  }
+
+  .contact-form {
+    padding: 24px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 11px 12px;
+  }
+
+  .contact-form button {
+    padding: 13px;
+    font-size: 1rem;
+  }
+}
