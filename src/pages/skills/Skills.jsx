@@ -1,45 +1,90 @@
-import './Skills.css'
+import { motion as Motion } from "framer-motion";
+import { skills } from "../../data/skillsData";
+import "./Skills.css";
+
+
+// Färger för kategorier
+const categoryColors = {
+  Frontend: "#a78bfa",
+  Backend: "#22c55e",
+  Database: "#9333ea",
+  Tools: "#f97316",
+};
+
+// Animationer
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.3 },
+  },
+};
 
 const Skills = () => {
+  const categories = ["Frontend", "Backend", "Database", "Tools"];
+
   return (
+    <section className="skills" id="skills">
     <div className="skills-page">
+      <Motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+        className="skills-wrapper"
+      >
+        <Motion.div variants={itemVariants} className="skills-header">
+          <h2>Skills & Technologies</h2>
+          <p>Färgglada, moderna och animerade skills</p>
+        </Motion.div>
 
-      <h1>Kompetenser</h1>
+        <div className="skills-categories">
+          {categories.map((category) => (
+            <Motion.div key={category} variants={itemVariants}>
+              <h3 className="category-title">
+                <span
+                  className="category-dot"
+                  style={{ backgroundColor: categoryColors[category] }}
+                />
+                {category}
+              </h3>
 
-      <section className="skills-section">
-        <h2>Tekniska färdigheter</h2>
-        <ul>
-          <li>React – komponentstruktur, hooks, UI/UX</li>
-          <li>Node.js & Express – API-design, middleware, routing</li>
-          <li>MongoDB – databaser, modeller, queries</li>
-          <li>REST API – struktur, dokumentation, säkerhet</li>
-          <li>Git & GitHub – versionshantering, branches, teamwork</li>
-        </ul>
-      </section>
-
-      <section className="skills-section">
-        <h2>Styrkor</h2>
-        <ul>
-          <li>Problemlösning och uthållighet</li>
-          <li>Struktur och ren kod</li>
-          <li>Kommunikation och samarbete</li>
-          <li>Snabb inlärning och nyfikenhet</li>
-          <li>UI/UX‑tänk från grafisk design</li>
-        </ul>
-      </section>
-
-      <section className="skills-section">
-        <h2>Arbetssätt</h2>
-        <ul>
-          <li>Agila metoder</li>
-          <li>Iterativ utveckling</li>
-          <li>Komponentbaserad frontend</li>
-          <li>Modulär backend (routes, controllers, models)</li>
-        </ul>
-      </section>
-
+              <div className="skills-list">
+                {skills
+                  .filter((skill) => skill.category === category)
+                  .map((skill) => {
+                    const Icon = skill.icon;
+                    return (
+                      <Motion.div
+                        key={skill.name}
+                        whileHover={{ scale: 1.1 }}
+                        className="skill-card"
+                      >
+                        <Icon
+                          className="skill-icon"
+                          style={{ color: skill.color }}
+                        />
+                        <span>{skill.name}</span>
+                      </Motion.div>
+                    );
+                  })}
+              </div>
+            </Motion.div>
+          ))}
+        </div>
+      </Motion.div>
     </div>
-  )
-}
+      </section>
+  );
+};
 
-export default Skills
+export default Skills;

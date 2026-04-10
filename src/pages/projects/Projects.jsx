@@ -1,8 +1,10 @@
 
+
 import './Projects.css'
 
 const Projects = () => {
   return (
+    <section className="projects" id="projects">
     <div className="projects-page">
 
       <h1>Projekt</h1>
@@ -20,7 +22,9 @@ const Projects = () => {
       </div>
 
     </div>
+  </section>
   )
 }
+
 
 export default Projects

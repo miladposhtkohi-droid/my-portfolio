@@ -13,7 +13,7 @@
 body {
   background: #0f0f14;
   color: #dcdcdc;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   overflow-x: hidden; /* Fixar att navbaren inte sticker ut */
 }
 

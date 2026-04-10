@@ -1,8 +1,10 @@
+import React from 'react'
 import Hero from '../../components/hero/Hero'
 import './Home.css'
 
 const Home = () => {
   return (
+    <section className="home" id="home">
     <div className="home">
 
       <Hero />
@@ -36,6 +38,7 @@ const Home = () => {
       </section>
 
     </div>
+  </section>
   )
 }
 
