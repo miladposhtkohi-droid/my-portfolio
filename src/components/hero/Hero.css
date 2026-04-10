@@ -37,9 +37,13 @@
   margin-top: 30px;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 26px;
   border-radius: 6px;
   text-decoration: none;
@@ -82,12 +86,17 @@
 
 @media (max-width: 900px) {
   .hero {
+    height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: auto;
     padding: 60px 40px;
     text-align: center;
+  }
+
+  .hero-content,
+  .hero-image {
+    width: 100%;
   }
 
   .hero-content {
@@ -106,6 +115,12 @@
     flex-direction: column;
     gap: 16px;
     align-items: center;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 320px;
   }
 }
 
@@ -132,7 +147,12 @@
 
   .hero-buttons .btn {
     width: 100%;
+    max-width: none;
     justify-content: center;
+  }
+
+  .hero-image img {
+    width: min(280px, 100%);
   }
 }
 
