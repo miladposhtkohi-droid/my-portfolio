@@ -1,5 +1,5 @@
-import './Hero.css'
-import logo from '../../assets/logo/Magisk logotyp med _.png'
+import "./Hero.css";
+import logo from "../../assets/logo/Magisk logotyp med _.png";
 
 const Hero = () => {
   return (
@@ -9,13 +9,21 @@ const Hero = () => {
         <h2>Fullstack Developer & Creative UI Designer</h2>
 
         <p>
-          I create modern, secure and visually magical web experiences.
-          Focused on fullstack development, fantasy-inspired UI and clean architecture.
+          I create modern, secure and visually magical web experiences. Focused
+          on fullstack development, fantasy-inspired UI and clean architecture.
         </p>
 
         <div className="hero-buttons">
-          <a href="#projects" className="btn primary">View Projects</a>
-          <a href="#contact" className="btn secondary">Contact Me</a>
+          <a href="#projects" className="btn primary">
+            View Projects
+          </a>
+          <a
+            href="/cv.pdf"
+            className="btn secondary"
+            download="Milad_Poshtkohi_CV.pdf"
+          >
+            Download My CV
+          </a>
         </div>
       </div>
 
@@ -23,7 +31,7 @@ const Hero = () => {
         <img src={logo} alt="Hero Logo" />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
