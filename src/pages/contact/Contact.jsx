@@ -23,7 +23,7 @@ const Contact = () => {
     setStatus("Skickar...");
 
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch("https://my-portfolio-9reu.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
