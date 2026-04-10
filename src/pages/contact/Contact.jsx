@@ -1,53 +1,95 @@
-import React from 'react'
-import './Contact.css'
-import { useState } from 'react'
-import myImage from '../../assets/myImage/Milad PoshtkohiCV_250731_134601 - kopia.jpg'
+import React, { useState } from 'react';
+import './Contact.css';
+import myImage from '../../assets/myImage/Milad PoshtkohiCV_250731_134601 - kopia.jpg';
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  const handleSubmit = (e) => {
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, email, message);
+    setStatus("Skickar...");
 
-    //Rensa fälten
-    setName('');
-    setEmail('');
-    setMessage('');
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
 
-    alert('Tack för ditt meddelande!');
-  }
+      const data = await res.json();
+      setStatus(data.message);
+
+      // Rensa fälten
+      setFormData({ name: "", email: "", message: "" });
+
+    } catch (error) {
+      setStatus("Något gick fel. Försök igen.", error);
+    }
+  };
+
   return (
     <section className="contact" id="contact">
-    <div className='contact-page'>
-       <h1>Contact</h1>
-       <p>Vill du komma i kontakt med mig? Hör gärna av dig!</p>
-       <div className="contact-container">
-       <div className="contact-image-box">
-              <img src={myImage} alt="My Image" className='contact-image' />  
+      <div className="contact-page">
+        <h1>Contact</h1>
+        <p>Vill du komma i kontakt med mig? Hör gärna av dig!</p>
 
-      
-       </div>
-              <form className='contact-form'>
-               <h2>Lmna ett meddelande</h2>
-               <label>Namn</label>
-               <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-               <label>Email</label>
-               <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-               <label>Meddelande</label>
-               <textarea value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-               <button type="submit" onClick={handleSubmit}>Skicka</button>
+        <div className="contact-container">
 
+          <div className="contact-image-box">
+            <img src={myImage} alt="My Image" className="contact-image" />
+          </div>
 
-              </form>
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <h2>Lämna ett meddelande</h2>
 
+            <label>Namn</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
-       </div>
-    </div>
-      </section>
-  )
-}
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-export default Contact
+            <label>Meddelande</label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+
+            <button type="submit">Skicka</button>
+
+            {status && <p className="contact-message">{status}</p>}
+          </form>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
