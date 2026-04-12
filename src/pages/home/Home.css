@@ -5,7 +5,7 @@
 }
 
 /* Sektioner */
-.home section {
+.home section:not(.hero) {
   margin-top: 80px;
   max-width: 900px;
 }
@@ -37,7 +37,7 @@
     padding: 30px 20px;
   }
 
-  .home section {
+  .home section:not(.hero) {
     margin-top: 40px;
   }
 

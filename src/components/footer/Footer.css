@@ -28,11 +28,14 @@
 .footer-links a {
   color: #dcdcdc;
   text-decoration: none;
-  transition: color 0.25s ease;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .footer-links a:hover {
   color: #c7b3ff;
+  transform: translateY(-1px);
 }
 
 /* Socials */
@@ -46,11 +49,14 @@
 .footer-socials a {
   color: #a78bfa;
   text-decoration: none;
-  transition: color 0.25s ease;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .footer-socials a:hover {
   color: #c084fc;
+  transform: translateY(-1px);
 }
 
 /* Bottom */

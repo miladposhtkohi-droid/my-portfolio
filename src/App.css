@@ -1,20 +1,17 @@
-/* ===========================
-   GLOBAL RESET
-=========================== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===========================
-   BODY
-=========================== */
+/* BODY */
 body {
   background: #0f0f14;
   color: #dcdcdc;
   font-family: "Inter", sans-serif;
-  overflow-x: hidden; /* Fixar att navbaren inte sticker ut */
+  overflow-x: hidden;
+  padding-top: 80px; /* navbar spacing */
 }
 
 img {
@@ -23,80 +20,44 @@ img {
   display: block;
 }
 
-/* ===========================
-   LAYOUT WRAPPER
-=========================== */
+/* MAIN WRAPPER */
 main {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding-top: 80px; /* så navbar inte täcker hero */
 }
 
-/* ===========================
-   GLOBAL SECTIONS
-=========================== */
+/* GLOBAL SECTIONS */
 section {
   padding: 60px 40px;
 }
 
-/* ===========================
-   RESPONSIVE GRID
-=========================== */
-.grid {
-  display: grid;
-  gap: 30px;
-}
-
-/* ===========================
-   RESPONSIVE BREAKPOINTS
-=========================== */
-
-/* Tablet */
+/* BREAKPOINTS */
 @media (max-width: 1024px) {
-  main {
+  body {
     padding-top: 70px;
   }
-
   section {
     padding: 50px 30px;
   }
 }
 
-/* Mobil */
 @media (max-width: 768px) {
-  main {
+  body {
     padding-top: 65px;
   }
-
   section {
     padding: 40px 20px;
   }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
 }
 
-/* Extra liten mobil */
 @media (max-width: 480px) {
   section {
     padding: 30px 16px;
   }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  p { font-size: 1rem; }
 }
