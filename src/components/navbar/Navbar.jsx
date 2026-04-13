@@ -58,6 +58,11 @@ const Navbar = () => {
           <button className="logo-btn" onClick={() => scrollToSection("home")}>
             <img src={logo} alt="Logo" />
           </button>
+          <div className="language-toggle">
+            <button type="button" onClick={changeLanguage}>
+              {i18n.language === "en" ? "SV" : "EN"}
+            </button>
+          </div>
         </div>
 
         <nav className="nav-links">
@@ -91,15 +96,6 @@ const Navbar = () => {
               {t(link.labelKey)}
             </button>
           ))}
-          <button className="language-mobile" onClick={changeLanguage}>
-            {i18n.language === "en" ? "SV" : "EN"}
-          </button>
-        </div>
-
-        <div className="language-toggle">
-          <button onClick={changeLanguage}>
-            {i18n.language === "en" ? "SV" : "EN"}
-          </button>
         </div>
       </div>
     </header>
