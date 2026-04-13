@@ -1,31 +1,43 @@
-import './Footer.css'
+import "./Footer.css";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
+
+      {/* Top section */}
       <div className="footer-top">
         <h3>Milad Poshtkohi</h3>
-        <p>Crafting magical and modern web experiences.</p>
+        <p>{t("footer.description")}</p>
       </div>
 
+      {/* Navigation links */}
       <div className="footer-links">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">{t("navbar.home")}</a>
+        <a href="#projects">{t("navbar.projects")}</a>
+        <a href="#skills">{t("navbar.skills")}</a>
+        <a href="#contact">{t("navbar.contact")}</a>
       </div>
 
+      {/* Social links */}
       <div className="footer-socials">
-        <a href="https://github.com/" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-        <a href="mailto:miladposhtkohi@gmail.com">Email</a>
+        <a href="https://github.com/MiladPoshtkohi" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+          LinkedIn
+        </a>
       </div>
 
+      {/* Bottom */}
       <div className="footer-bottom">
-        <p>© 2024 Milad Poshtkohi. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Milad Poshtkohi — {t("footer.rights")}</p>
       </div>
-    </footer>
-  )
-}
 
-export default Footer
+    </footer>
+  );
+};
+
+export default Footer;

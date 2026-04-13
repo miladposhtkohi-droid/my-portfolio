@@ -5,16 +5,14 @@
     "skills": "Färdigheter",
     "contact": "Kontakt"
   },
-
- "hero": {
+  "hero": {
     "name": "Milad Poshtkohi",
     "title": "Fullstackutvecklare & Kreativ UI Designer",
     "description": "Jag skapar moderna, säkra och visuellt magiska webbupplevelser. Fokus på fullstack utveckling, fantasy inspirerad UI och ren arkitektur.",
     "viewProjects": "Visa projekt",
     "downloadCV": "Ladda ner mitt CV"
   },
-
-   "home": {
+  "home": {
     "about": {
       "title": "Om mig",
       "text": "Jag är en fullstack‑utvecklare med bakgrund inom grafisk design. Jag brinner för att skapa tydliga, användarvänliga och välstrukturerade digitala lösningar. Min styrka ligger i kombinationen av teknisk kompetens och visuellt tänkande."
@@ -31,13 +29,13 @@
       "item4": "Kommunikation och samarbete"
     }
   },
-    "projects": {
+  "projects": {
     "title": "Projekt",
     "description": "Här kommer jag att visa upp mina fullstack‑projekt från Nackademin och egna projekt. Jag har byggt applikationer med React, Node.js, Express och MongoDB, samt utvecklat REST‑API:er och responsiva gränssnitt.",
     "comingSoonTitle": "Kommer snart",
     "comingSoonText": "Projekt läggs till inom kort."
   },
-    "contact": {
+  "contact": {
     "title": "Kontakt",
     "subtitle": "Vill du komma i kontakt med mig? Hör gärna av dig!",
     "formTitle": "Lämna ett meddelande",
@@ -47,14 +45,19 @@
     "send": "Skicka",
     "sending": "Skickar...",
     "error": "Något gick fel. Försök igen."
+  },
+  "footer": {
+    "description": "Fullstack‑utvecklare som skapar moderna, säkra och visuellt magiska webbupplevelser.",
+    "rights": "Alla rättigheter förbehållna"
+  },
+  "skills": {
+    "title": "Skills & Tekniker",
+    "subtitle": "Färgglada, moderna och animerade skills",
+    "categories": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Database": "Databaser",
+      "Tools": "Verktyg"
+    }
   }
-
-  
-
-
-
-
- 
-
 }
-

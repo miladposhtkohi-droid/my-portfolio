@@ -48,9 +48,23 @@
     "send": "Send",
     "sending": "Sending...",
     "error": "Something went wrong. Please try again."
+  },
+
+    "footer": {
+    "description": "Fullstack developer creating modern, secure and visually magical web experiences.",
+    "rights": "All rights reserved"
+  },
+
+
+   "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "Colorful, modern and animated skills",
+    "categories": {
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Database": "Database",
+      "Tools": "Tools"
+    }
   }
-
-
-
 }
 
