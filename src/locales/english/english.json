@@ -46,6 +46,8 @@
     "email": "Email",
     "message": "Message",
     "send": "Send",
+    "sendEmail": "Send email",
+    "orSendEmail": "Or send an email directly to:",
     "sending": "Sending...",
     "error": "Something went wrong. Please try again."
   },

@@ -43,6 +43,8 @@
     "email": "Email",
     "message": "Meddelande",
     "send": "Skicka",
+    "sendEmail": "Skicka mail",
+    "orSendEmail": "Eller skicka ett mail direkt till:",
     "sending": "Skickar...",
     "error": "Något gick fel. Försök igen."
   },

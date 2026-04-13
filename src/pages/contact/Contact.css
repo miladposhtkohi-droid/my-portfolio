@@ -145,6 +145,45 @@
   font-style: italic;
 }
 
+.contact-info {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  color: #dcdcdc;
+}
+
+.contact-info p {
+  margin: 0;
+  color: #c7b3ff;
+}
+
+.contact-email {
+  color: #ffffff;
+  text-decoration: none;
+  word-break: break-all;
+  font-weight: 600;
+}
+
+.email-button {
+  padding: 12px 18px;
+  background: rgba(167, 139, 250, 0.2);
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.email-button:hover {
+  background: rgba(167, 139, 250, 0.35);
+  border-color: #a78bfa;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .contact-page {
