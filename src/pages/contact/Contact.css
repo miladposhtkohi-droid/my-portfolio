@@ -7,7 +7,7 @@
 
 .contact-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   gap: 40px;
   margin-bottom: 48px;
@@ -15,6 +15,7 @@
 
 .contact-copy {
   max-width: 720px;
+  text-align: center;
 }
 
 .contact-label {
@@ -49,6 +50,7 @@
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 12px;
+  justify-content: center;
 }
 
 .contact-container {

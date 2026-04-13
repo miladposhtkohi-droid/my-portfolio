@@ -39,7 +39,6 @@ export const skills = [
   { name: "Python", category: "Backend", icon: SiPython, color: "#ffd43b" },
 
   // --- Database ---
-  { name: "SQL", category: "Database", icon: SiMysql, color: "#005a9c" },
   { name: "MySQL", category: "Database", icon: SiMysql, color: "#005a9c" },
   { name: "MongoDB", category: "Database", icon: SiMongodb, color: "#4db33d" },
   {

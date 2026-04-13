@@ -1,12 +1,12 @@
 import "./Projects.css";
 import Pokemon from "../../assets/projektBild/pokemon.png";
+import { motion as Motion } from "framer-motion";
 const projectData = [
   {
     title: "Pokemons API Explorer",
     description:
       " A sleek interface to browse and search Pokémon data, featuring responsive design and smooth interactions.",
-    image:
-      Pokemon,
+    image: Pokemon,
     demoLink: "https://pokemon-app-one.vercel.app/",
     codeLink: "https://github.com/miladposhtkohi-droid/pokemon-app",
   },
@@ -58,21 +58,112 @@ const projectData = [
 ];
 
 const Projects = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const introVariants = {
+    hidden: {
+      opacity: 0,
+      y: -40,
+      filter: "blur(8px)",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        type: "spring",
+        stiffness: 80,
+        damping: 20,
+        duration: 0.6,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 60,
+        damping: 20,
+      },
+    },
+  };
+
+  const buttonVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+      },
+    },
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
+
   return (
     <section className="projects" id="projects">
       <div className="projects-container">
-        <div className="projects-intro">
-          <p className="section-label">Selected Projects</p>
-          <h2>Recent work I’m proud of</h2>
-          <p>
+        <Motion.div
+          className="projects-intro"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.3 }}
+        >
+          <Motion.p variants={introVariants} className="section-label">
+            Selected Projects
+          </Motion.p>
+          <Motion.h2 variants={introVariants}>
+            Recent work I'm proud of
+          </Motion.h2>
+          <Motion.p variants={introVariants}>
             A curated collection of portfolio pieces showing modern UI,
             responsive layouts, and polished frontend solutions.
-          </p>
-        </div>
+          </Motion.p>
+        </Motion.div>
 
-        <div className="projects-grid">
+        <Motion.div
+          className="projects-grid"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2 }}
+        >
           {projectData.map((project, index) => (
-            <article className="project-card" key={index}>
+            <Motion.article
+              className="project-card"
+              key={index}
+              variants={cardVariants}
+            >
               <div className="project-image-wrapper">
                 <img
                   className="project-image"
@@ -84,27 +175,29 @@ const Projects = () => {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
               </div>
-              <div className="project-actions">
-                <a
+              <Motion.div className="project-actions" variants={buttonVariants}>
+                <Motion.a
                   className="project-button demo"
                   href={project.demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  whileHover="hover"
                 >
                   Demo
-                </a>
-                <a
+                </Motion.a>
+                <Motion.a
                   className="project-button code"
                   href={project.codeLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  whileHover="hover"
                 >
                   GitHub
-                </a>
-              </div>
-            </article>
+                </Motion.a>
+              </Motion.div>
+            </Motion.article>
           ))}
-        </div>
+        </Motion.div>
       </div>
     </section>
   );

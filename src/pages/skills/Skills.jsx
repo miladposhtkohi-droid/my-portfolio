@@ -21,11 +21,22 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: {
+    opacity: 0,
+    y: 20,
+    filter: "blur(6px)",
+  },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.35, ease: "easeOut" },
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.35,
+      ease: "easeOut",
+      type: "spring",
+      stiffness: 80,
+      damping: 20,
+    },
   },
 };
 
@@ -40,7 +51,7 @@ const Skills = () => {
         <Motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ amount: 0.3 }}
           variants={containerVariants}
           className="skills-wrapper"
         >
