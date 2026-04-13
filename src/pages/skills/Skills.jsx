@@ -11,21 +11,21 @@ const categoryColors = {
   Tools: "#f97316",
 };
 
-// Animationer
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.08 },
+    y: 0,
+    transition: { staggerChildren: 0.1 },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
-    scale: 1,
-    transition: { duration: 0.3 },
+    y: 0,
+    transition: { duration: 0.35, ease: "easeOut" },
   },
 };
 
@@ -45,20 +45,25 @@ const Skills = () => {
           className="skills-wrapper"
         >
           <Motion.div variants={itemVariants} className="skills-header">
+            <p className="skills-label">{t("skills.title")}</p>
             <h2>{t("skills.title")}</h2>
             <p>{t("skills.subtitle")}</p>
           </Motion.div>
 
           <div className="skills-categories">
             {categories.map((category) => (
-              <Motion.div key={category} variants={itemVariants}>
-                <h3 className="category-title">
+              <Motion.div
+                key={category}
+                variants={itemVariants}
+                className="skills-category"
+              >
+                <div className="category-heading">
                   <span
                     className="category-dot"
                     style={{ backgroundColor: categoryColors[category] }}
                   />
-                  {t(`skills.categories.${category}`)}
-                </h3>
+                  <h3>{t(`skills.categories.${category}`)}</h3>
+                </div>
 
                 <div className="skills-list">
                   {skills
@@ -68,13 +73,13 @@ const Skills = () => {
                       return (
                         <Motion.div
                           key={skill.name}
-                          whileHover={{ scale: 1.1 }}
+                          variants={itemVariants}
+                          whileHover={{ y: -6, scale: 1.03 }}
                           className="skill-card"
                         >
-                          <Icon
-                            className="skill-icon"
-                            style={{ color: skill.color }}
-                          />
+                          <div className="skill-card-icon">
+                            <Icon style={{ color: skill.color }} />
+                          </div>
                           <span>{skill.name}</span>
                         </Motion.div>
                       );

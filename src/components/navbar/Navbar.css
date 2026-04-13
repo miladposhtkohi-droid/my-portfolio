@@ -13,7 +13,7 @@
   width: 100%;
   max-width: 1400px;
   height: 80px;
-  padding: 0 40px;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -174,7 +174,7 @@
     display: flex;
   }
   .navbar-inner {
-    padding: 0 20px;
+    padding: 0 16px;
   }
   .logo-container img {
     height: 45px;
@@ -187,7 +187,7 @@
     max-width: 320px;
   }
   .navbar-inner {
-    padding: 0 16px;
+    padding: 0 12px;
     height: 70px;
   }
 }

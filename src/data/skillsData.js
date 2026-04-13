@@ -40,7 +40,7 @@ export const skills = [
 
   // --- Database ---
   { name: "SQL", category: "Database", icon: SiMysql, color: "#005a9c" },
-  { name: "NoSQL", category: "Database", icon: SiMongodb, color: "#4db33d" },
+  { name: "MySQL", category: "Database", icon: SiMysql, color: "#005a9c" },
   { name: "MongoDB", category: "Database", icon: SiMongodb, color: "#4db33d" },
   {
     name: "pgAdmin",

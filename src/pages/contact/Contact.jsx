@@ -1,6 +1,8 @@
 import "./Contact.css";
 import logo from "../../assets/logo/Magisk logotyp med _.png";
 import { useTranslation } from "react-i18next";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -27,40 +29,45 @@ const Contact = () => {
         </div>
 
         <div className="contact-container">
-          <div className="contact-card image-card">
-            <img src={logo} alt="Logo" className="contact-image" />
-          </div>
+          <div className="contact-card contact-card-grid">
+            <div className="image-card">
+              <img src={logo} alt="Logo" className="contact-image" />
+            </div>
 
-          <div className="contact-card info-card">
-            <h2>{t("contact.connectTitle")}</h2>
-            <p>{t("contact.connectText")}</p>
-            <div className="contact-details">
-              <span>{t("contact.available")}</span>
-              <a className="contact-email" href={`mailto:${contactEmail}`}>
-                {contactEmail}
-              </a>
-              <div className="contact-links">
-                <a
-                  href="https://github.com/miladposhtkohi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
+            <div className="info-card">
+              <h2>{t("contact.connectTitle")}</h2>
+              <p>{t("contact.connectText")}</p>
+              <div className="contact-details">
+                <span>{t("contact.available")}</span>
+                <a className="contact-email" href={`mailto:${contactEmail}`}>
+                  {contactEmail}
                 </a>
-                <a
-                  href="https://www.linkedin.com/in/miladposhtkohi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  href="https://wa.me/46702633193"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  WhatsApp
-                </a>
+                <div className="contact-links">
+                  <a
+                    href="https://github.com/miladposhtkohi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiGithub className="contact-link-icon" />
+                    GitHub
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/miladposhtkohi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiLinkedin className="contact-link-icon" />
+                    LinkedIn
+                  </a>
+                  <a
+                    href="https://wa.me/46702633193"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaWhatsapp className="contact-link-icon" />
+                    WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
           </div>
