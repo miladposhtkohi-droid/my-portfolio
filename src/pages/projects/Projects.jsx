@@ -1,6 +1,5 @@
 import "./Projects.css";
 import Pokemon from "../../assets/projektBild/pokemon.png";
-import { motion as Motion } from "framer-motion";
 const projectData = [
   {
     title: "Pokemons API Explorer",
@@ -58,112 +57,21 @@ const projectData = [
 ];
 
 const Projects = () => {
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const introVariants = {
-    hidden: {
-      opacity: 0,
-      y: -40,
-      filter: "blur(8px)",
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        type: "spring",
-        stiffness: 80,
-        damping: 20,
-        duration: 0.6,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-      scale: 0.9,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 60,
-        damping: 20,
-      },
-    },
-  };
-
-  const buttonVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15,
-      },
-    },
-    hover: {
-      scale: 1.05,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
-
   return (
     <section className="projects" id="projects">
       <div className="projects-container">
-        <Motion.div
-          className="projects-intro"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.3 }}
-        >
-          <Motion.p variants={introVariants} className="section-label">
-            Selected Projects
-          </Motion.p>
-          <Motion.h2 variants={introVariants}>
-            Recent work I'm proud of
-          </Motion.h2>
-          <Motion.p variants={introVariants}>
+        <div className="projects-intro">
+          <p className="section-label">Selected Projects</p>
+          <h2>Recent work I'm proud of</h2>
+          <p>
             A curated collection of portfolio pieces showing modern UI,
             responsive layouts, and polished frontend solutions.
-          </Motion.p>
-        </Motion.div>
+          </p>
+        </div>
 
-        <Motion.div
-          className="projects-grid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.2 }}
-        >
+        <div className="projects-grid">
           {projectData.map((project, index) => (
-            <Motion.article
-              className="project-card"
-              key={index}
-              variants={cardVariants}
-            >
+            <article className="project-card" key={index}>
               <div className="project-image-wrapper">
                 <img
                   className="project-image"
@@ -175,29 +83,27 @@ const Projects = () => {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
               </div>
-              <Motion.div className="project-actions" variants={buttonVariants}>
-                <Motion.a
+              <div className="project-actions">
+                <a
                   className="project-button demo"
                   href={project.demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover="hover"
                 >
                   Demo
-                </Motion.a>
-                <Motion.a
+                </a>
+                <a
                   className="project-button code"
                   href={project.codeLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover="hover"
                 >
                   GitHub
-                </Motion.a>
-              </Motion.div>
-            </Motion.article>
+                </a>
+              </div>
+            </article>
           ))}
-        </Motion.div>
+        </div>
       </div>
     </section>
   );
