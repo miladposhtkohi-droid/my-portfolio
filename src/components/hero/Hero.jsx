@@ -1,28 +1,29 @@
 import "./Hero.css";
 import logo from "../../assets/logo/Magisk logotyp med _.png";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Milad Poshtkohi</h1>
-        <h2>Fullstack Developer & Creative UI Designer</h2>
+        <h1>{t("hero.name")}</h1>
+        <h2>{t("hero.title")}</h2>
 
-        <p>
-          I create modern, secure and visually magical web experiences. Focused
-          on fullstack development, fantasy-inspired UI and clean architecture.
-        </p>
+        <p>{t("hero.description")}</p>
 
         <div className="hero-buttons">
           <a href="#projects" className="btn primary">
-            View Projects
+            {t("hero.viewProjects")}
           </a>
+
           <a
             href="/cv.pdf"
             className="btn secondary"
             download="Milad_Poshtkohi_CV.pdf"
           >
-            Download My CV
+            {t("hero.downloadCV")}
           </a>
         </div>
       </div>

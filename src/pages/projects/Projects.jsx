@@ -1,30 +1,27 @@
-
-
 import './Projects.css'
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="projects" id="projects">
-    <div className="projects-page">
+      <div className="projects-page">
 
-      <h1>Projekt</h1>
-      <p>
-        Här kommer jag att visa upp mina fullstack‑projekt från Nackademin och egna projekt.
-        Jag har byggt applikationer med React, Node.js, Express och MongoDB, samt utvecklat
-        REST‑API:er och responsiva gränssnitt.
-      </p>
+        <h1>{t("projects.title")}</h1>
 
-      <div className="projects-grid">
-        <div className="project-card placeholder">
-          <h3>Kommer snart</h3>
-          <p>Projekt läggs till inom kort.</p>
+        <p>{t("projects.description")}</p>
+
+        <div className="projects-grid">
+          <div className="project-card placeholder">
+            <h3>{t("projects.comingSoonTitle")}</h3>
+            <p>{t("projects.comingSoonText")}</p>
+          </div>
         </div>
-      </div>
 
-    </div>
-  </section>
+      </div>
+    </section>
   )
 }
-
 
 export default Projects

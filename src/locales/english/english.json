@@ -1,0 +1,56 @@
+{
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "name": "Milad Poshtkohi",
+    "title": "Fullstack Developer & Creative UI Designer",
+    "description": "I create modern, secure and visually magical web experiences. Focused on fullstack development, fantasy inspired UI and clean architecture.",
+    "viewProjects": "View Projects",
+    "downloadCV": "Download My CV"
+  },
+  
+  "home": {
+    "about": {
+      "title": "About Me",
+      "text": "I am a fullstack developer with a background in graphic design. I am passionate about creating clear, user‑friendly and well‑structured digital solutions. My strength lies in combining technical skills with visual thinking."
+    },
+    "tech": {
+      "title": "Technologies I Work With",
+      "text": "During my studies at Nackademin, I have worked with modern open‑source technologies such as React, Node.js, Express and MongoDB. I build fullstack applications, develop REST APIs and create responsive interfaces with a focus on clean code and good UX."
+    },
+    "values": {
+      "title": "How I Work",
+      "item1": "Structured and clean code",
+      "item2": "Component‑based thinking",
+      "item3": "Agile workflows",
+      "item4": "Communication and collaboration"
+    }
+  },
+    "projects": {
+    "title": "Projects",
+    "description": "Here I will showcase my fullstack projects from Nackademin and personal work. I have built applications using React, Node.js, Express and MongoDB, as well as developed REST APIs and responsive interfaces.",
+    "comingSoonTitle": "Coming Soon",
+    "comingSoonText": "Projects will be added shortly."
+  },
+
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Want to get in touch with me? Feel free to reach out!",
+    "formTitle": "Leave a message",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "error": "Something went wrong. Please try again."
+  }
+
+
+
+}
+

@@ -1,0 +1,58 @@
+{
+  "navbar": {
+    "home": "Hem",
+    "projects": "Projekt",
+    "skills": "Färdigheter",
+    "contact": "Kontakt"
+  },
+
+ "hero": {
+    "name": "Milad Poshtkohi",
+    "title": "Fullstackutvecklare & Kreativ UI Designer",
+    "description": "Jag skapar moderna, säkra och visuellt magiska webbupplevelser. Fokus på fullstack utveckling, fantasy inspirerad UI och ren arkitektur.",
+    "viewProjects": "Visa projekt",
+    "downloadCV": "Ladda ner mitt CV"
+  },
+
+   "home": {
+    "about": {
+      "title": "Om mig",
+      "text": "Jag är en fullstack‑utvecklare med bakgrund inom grafisk design. Jag brinner för att skapa tydliga, användarvänliga och välstrukturerade digitala lösningar. Min styrka ligger i kombinationen av teknisk kompetens och visuellt tänkande."
+    },
+    "tech": {
+      "title": "Tekniker jag arbetar med",
+      "text": "Under min utbildning på Nackademin har jag arbetat med moderna open‑source‑tekniker som React, Node.js, Express och MongoDB. Jag bygger fullstack‑applikationer, utvecklar REST‑API:er och skapar responsiva gränssnitt med fokus på ren kod och god UX."
+    },
+    "values": {
+      "title": "Hur jag arbetar",
+      "item1": "Strukturerad och tydlig kod",
+      "item2": "Komponentbaserat tänk",
+      "item3": "Agila arbetsmetoder",
+      "item4": "Kommunikation och samarbete"
+    }
+  },
+    "projects": {
+    "title": "Projekt",
+    "description": "Här kommer jag att visa upp mina fullstack‑projekt från Nackademin och egna projekt. Jag har byggt applikationer med React, Node.js, Express och MongoDB, samt utvecklat REST‑API:er och responsiva gränssnitt.",
+    "comingSoonTitle": "Kommer snart",
+    "comingSoonText": "Projekt läggs till inom kort."
+  },
+    "contact": {
+    "title": "Kontakt",
+    "subtitle": "Vill du komma i kontakt med mig? Hör gärna av dig!",
+    "formTitle": "Lämna ett meddelande",
+    "name": "Namn",
+    "email": "Email",
+    "message": "Meddelande",
+    "send": "Skicka",
+    "sending": "Skickar...",
+    "error": "Något gick fel. Försök igen."
+  }
+
+
+
+
+ 
+
+}
+

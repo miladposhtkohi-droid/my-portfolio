@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './Contact.css';
 import myImage from '../../assets/myImage/Milad PoshtkohiCV_250731_134601 - kopia.jpg';
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,7 +23,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Skickar...");
+    setStatus(t("contact.sending"));
 
     try {
       const res = await fetch("https://my-portfolio-9reu.onrender.com/api/contact", {
@@ -32,19 +35,19 @@ const Contact = () => {
       const data = await res.json();
       setStatus(data.message);
 
-      // Rensa fälten
       setFormData({ name: "", email: "", message: "" });
 
     } catch (error) {
-      setStatus("Något gick fel. Försök igen.", error);
+      setStatus(t("contact.error"));
     }
   };
 
   return (
     <section className="contact" id="contact">
       <div className="contact-page">
-        <h1>Contact</h1>
-        <p>Vill du komma i kontakt med mig? Hör gärna av dig!</p>
+
+        <h1>{t("contact.title")}</h1>
+        <p>{t("contact.subtitle")}</p>
 
         <div className="contact-container">
 
@@ -53,9 +56,9 @@ const Contact = () => {
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
-            <h2>Lämna ett meddelande</h2>
+            <h2>{t("contact.formTitle")}</h2>
 
-            <label>Namn</label>
+            <label>{t("contact.name")}</label>
             <input
               type="text"
               name="name"
@@ -64,7 +67,7 @@ const Contact = () => {
               required
             />
 
-            <label>Email</label>
+            <label>{t("contact.email")}</label>
             <input
               type="email"
               name="email"
@@ -73,7 +76,7 @@ const Contact = () => {
               required
             />
 
-            <label>Meddelande</label>
+            <label>{t("contact.message")}</label>
             <textarea
               name="message"
               value={formData.message}
@@ -81,7 +84,7 @@ const Contact = () => {
               required
             ></textarea>
 
-            <button type="submit">Skicka</button>
+            <button type="submit">{t("contact.send")}</button>
 
             {status && <p className="contact-message">{status}</p>}
           </form>

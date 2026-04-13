@@ -37,7 +37,9 @@
 
 .logo-container img {
   height: 55px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
 .logo-container img:hover {
@@ -75,6 +77,14 @@
 
 .nav-links button:hover {
   color: #c7b3ff;
+}
+
+.nav-links button.active {
+  color: #ffffff;
+}
+
+.nav-links button.active::after {
+  width: 100%;
 }
 
 .nav-links button:hover::after {
@@ -139,11 +149,35 @@
   transition: color 0.25s ease;
 }
 
+.mobile-menu button.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
 .mobile-menu button:hover {
   color: #c7b3ff;
 }
 
-/* RESPONSIVE */
+.language-mobile {
+  margin-top: 14px;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(234, 234, 234, 0.25);
+  border-radius: 999px;
+  color: #eaeaea;
+  padding: 10px 16px;
+  width: fit-content;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.language-mobile:hover {
+  background: rgba(167, 139, 250, 0.18);
+  border-color: #a78bfa;
+}
+
 @media (max-width: 900px) {
   .nav-links {
     display: none;
@@ -167,5 +201,55 @@
   .navbar-inner {
     padding: 0 16px;
     height: 70px;
+  }
+  .language-toggle {
+    top: 12px;
+    right: 14px;
+  }
+}
+
+/* Language toggle */
+.language-toggle {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.language-toggle button {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(234, 234, 234, 0.3);
+  border-radius: 999px;
+  padding: 8px 14px;
+  color: #eaeaea;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.language-toggle button:hover {
+  background: rgba(167, 139, 250, 0.18);
+  border-color: #a78bfa;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .language-toggle {
+    top: 14px;
+    right: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .language-toggle {
+    top: 12px;
+    right: 14px;
   }
 }

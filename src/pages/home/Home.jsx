@@ -1,44 +1,39 @@
 import React from 'react'
 import Hero from '../../components/hero/Hero'
 import './Home.css'
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="home" id="home">
-    <div className="home">
+      <div className="home">
 
-      <Hero />
+        <Hero />
 
-      <section className="about">
-        <h2>Om mig</h2>
-        <p>
-          Jag är en fullstack‑utvecklare med bakgrund inom grafisk design.
-          Jag brinner för att skapa tydliga, användarvänliga och välstrukturerade digitala lösningar.
-          Min styrka ligger i kombinationen av teknisk kompetens och visuellt tänkande.
-        </p>
-      </section>
+        <section className="about">
+          <h2>{t("home.about.title")}</h2>
+          <p>{t("home.about.text")}</p>
+        </section>
 
-      <section className="tech">
-        <h2>Tekniker jag arbetar med</h2>
-        <p>
-          Under min utbildning på Nackademin har jag arbetat med moderna open‑source‑tekniker
-          som React, Node.js, Express och MongoDB. Jag bygger fullstack‑applikationer,
-          utvecklar REST‑API:er och skapar responsiva gränssnitt med fokus på ren kod och god UX.
-        </p>
-      </section>
+        <section className="tech">
+          <h2>{t("home.tech.title")}</h2>
+          <p>{t("home.tech.text")}</p>
+        </section>
 
-      <section className="values">
-        <h2>Hur jag arbetar</h2>
-        <ul>
-          <li>Strukturerad och tydlig kod</li>
-          <li>Komponentbaserat tänk</li>
-          <li>Agila arbetsmetoder</li>
-          <li>Kommunikation och samarbete</li>
-        </ul>
-      </section>
+        <section className="values">
+          <h2>{t("home.values.title")}</h2>
+          <ul>
+            <li>{t("home.values.item1")}</li>
+            <li>{t("home.values.item2")}</li>
+            <li>{t("home.values.item3")}</li>
+            <li>{t("home.values.item4")}</li>
+          </ul>
+        </section>
 
-    </div>
-  </section>
+      </div>
+    </section>
   )
 }
 
