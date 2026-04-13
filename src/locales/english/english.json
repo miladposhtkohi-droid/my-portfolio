@@ -40,16 +40,13 @@
 
   "contact": {
     "title": "Contact",
-    "subtitle": "Want to get in touch with me? Feel free to reach out!",
-    "formTitle": "Leave a message",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "send": "Send",
-    "sendEmail": "Send email",
-    "orSendEmail": "Or send an email directly to:",
-    "sending": "Sending...",
-    "error": "Something went wrong. Please try again."
+    "subtitle": "Want to get in touch? I am available for new projects and collaborations.",
+    "description": "Send me an email or download my resume to see how I can help bring your next project to life.",
+    "connectTitle": "Let’s connect",
+    "connectText": "I’m currently open for freelance work and full-time roles. If you have a project idea or want to discuss a collaboration, send me a message.",
+    "available": "Available for opportunities in Sweden and remote.",
+    "emailButton": "Send me an email",
+    "resumeButton": "Download resume"
   },
 
     "footer": {

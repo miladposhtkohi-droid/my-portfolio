@@ -9,6 +9,7 @@ import {
   SiExpress,
   SiMongodb,
   SiPostgresql,
+  SiMysql,
   SiGit,
   SiGithub,
   SiFigma,
@@ -38,6 +39,8 @@ export const skills = [
   { name: "Python", category: "Backend", icon: SiPython, color: "#ffd43b" },
 
   // --- Database ---
+  { name: "SQL", category: "Database", icon: SiMysql, color: "#005a9c" },
+  { name: "NoSQL", category: "Database", icon: SiMongodb, color: "#4db33d" },
   { name: "MongoDB", category: "Database", icon: SiMongodb, color: "#4db33d" },
   {
     name: "pgAdmin",

@@ -1,5 +1,5 @@
 import "./Hero.css";
-import logo from "../../assets/logo/Magisk logotyp med _.png";
+import myImage from "../../assets/myImage/Milad.jpg";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
@@ -29,7 +29,7 @@ const Hero = () => {
       </div>
 
       <div className="hero-image">
-        <img src={logo} alt="Hero Logo" />
+        <img src={myImage} alt="Milad" />
       </div>
     </section>
   );

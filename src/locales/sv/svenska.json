@@ -37,16 +37,13 @@
   },
   "contact": {
     "title": "Kontakt",
-    "subtitle": "Vill du komma i kontakt med mig? Hör gärna av dig!",
-    "formTitle": "Lämna ett meddelande",
-    "name": "Namn",
-    "email": "Email",
-    "message": "Meddelande",
-    "send": "Skicka",
-    "sendEmail": "Skicka mail",
-    "orSendEmail": "Eller skicka ett mail direkt till:",
-    "sending": "Skickar...",
-    "error": "Något gick fel. Försök igen."
+    "subtitle": "Vill du komma i kontakt? Jag är tillgänglig för nya projekt och samarbeten.",
+    "description": "Skicka gärna ett mail eller ladda ner mitt CV för att se hur jag kan bidra till ditt nästa projekt.",
+    "connectTitle": "Låt oss prata",
+    "connectText": "Jag är tillgänglig för frilansuppdrag och heltidsroller. Om du har en idé eller vill diskutera samarbete, hör av dig.",
+    "available": "Tillgänglig för uppdrag i Sverige och på distans.",
+    "emailButton": "Skicka mail",
+    "resumeButton": "Ladda ner CV"
   },
   "footer": {
     "description": "Fullstack‑utvecklare som skapar moderna, säkra och visuellt magiska webbupplevelser.",
