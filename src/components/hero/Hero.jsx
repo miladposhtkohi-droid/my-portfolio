@@ -14,13 +14,13 @@ const Hero = () => {
         <p>{t("hero.description")}</p>
 
         <div className="hero-buttons">
-          <a href="#projects" className="btn primary">
+          <a href="#projects" className="btn secondary">
             {t("hero.viewProjects")}
           </a>
 
           <a
             href="/cv.pdf"
-            className="btn secondary"
+            className="btn primary"
             download="Milad_Poshtkohi_CV.pdf"
           >
             {t("hero.downloadCV")}
