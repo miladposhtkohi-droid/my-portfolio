@@ -126,12 +126,15 @@
   width: min(320px, 85%);
   height: calc(100vh - 80px);
   background: #15151d;
-  padding: 36px 22px;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 18px;
   transition: right 0.35s ease;
   box-shadow: -12px 0 30px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+  align-items: flex-start;
+  z-index: 1100;
 }
 
 .mobile-menu.show {
@@ -139,13 +142,18 @@
 }
 
 .mobile-menu button {
+  width: 100%;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
   background: none;
   border: none;
   cursor: pointer;
   color: #eaeaea;
   font-size: 1.15rem;
   font-weight: 500;
-  text-align: left;
+  padding: 12px 0;
   transition: color 0.25s ease;
 }
 
@@ -159,9 +167,7 @@
 }
 
 .language-mobile {
-  margin-top: 14px;
-  align-self: flex-start;
-  background: rgba(255, 255, 255, 0.08);
+  margin-top: auto;
   border: 1px solid rgba(234, 234, 234, 0.25);
   border-radius: 999px;
   color: #eaeaea;
@@ -191,6 +197,9 @@
   .logo-container img {
     height: 45px;
   }
+  .language-toggle {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
@@ -201,10 +210,6 @@
   .navbar-inner {
     padding: 0 16px;
     height: 70px;
-  }
-  .language-toggle {
-    top: 12px;
-    right: 14px;
   }
 }
 
