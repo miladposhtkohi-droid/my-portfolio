@@ -1,5 +1,7 @@
 import "./Projects.css";
 import Pokemon from "../../assets/projektBild/pokemon.png";
+import SimpleBlog from "../../assets/projektBild/BlogBild.png";
+import LoginHabits from "../../assets/projektBild/grupp9.png";
 const projectData = [
   {
     title: "Pokemons API Explorer",
@@ -10,22 +12,20 @@ const projectData = [
     codeLink: "https://github.com/miladposhtkohi-droid/pokemon-app",
   },
   {
-    title: "E-commerce Landing",
+    title: "Simple Blog",
     description:
-      "A clean product landing page with product highlights, pricing cards, and a modern call-to-action section.",
-    image:
-      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
-    demoLink: "https://example.com/demo/ecommerce",
-    codeLink: "https://github.com/miladposhtkohi-droid/ecommerce-landing",
+      "A clean blog platform with article management and modern design.",
+    image: SimpleBlog,
+    demoLink: "https://invidoel-4.vercel.app/",
+    codeLink: "https://github.com/miladposhtkohi-droid/invidoel_4",
   },
   {
-    title: "Portfolio Showcase",
+    title: "Login Habits Todo&Activities Event Planner",
     description:
       "A personal portfolio layout with bold typography, project previews, and a smooth responsive experience.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
-    demoLink: "https://example.com/demo/portfolio",
-    codeLink: "https://github.com/miladposhtkohi-droid/portfolio-showcase",
+    image: LoginHabits,
+    demoLink: "https://grupp-9-frontend-2.vercel.app/",
+    codeLink: "https://github.com/miladposhtkohi-droid/Grupp-9-Frontend_2",
   },
   {
     title: "Task Management App",
