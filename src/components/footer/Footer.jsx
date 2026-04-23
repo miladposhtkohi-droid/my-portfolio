@@ -23,10 +23,10 @@ const Footer = () => {
 
       {/* Social links */}
       <div className="footer-socials">
-        <a href="https://github.com/MiladPoshtkohi" target="_blank" rel="noreferrer">
+        <a href="https://github.com/miladposhtkohi-droid?tab=repositories" target="_blank" rel="noreferrer">
           GitHub
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+        <a href="linkedin.com/in/milad-poshtkohi-810618207" target="_blank" rel="noreferrer">
           LinkedIn
         </a>
       </div>
