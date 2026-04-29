@@ -44,7 +44,7 @@ const Contact = () => {
                 </a>
                 <div className="contact-links">
                   <a
-                    href="https://github.com/miladposhtkohi"
+                    href="https://github.com/miladposhtkohi-droid"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -52,7 +52,7 @@ const Contact = () => {
                     GitHub
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/miladposhtkohi"
+                    href="https://www.linkedin.com/in/milad-poshtkohi-810618207/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
