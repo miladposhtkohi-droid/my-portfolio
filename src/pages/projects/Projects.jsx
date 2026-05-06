@@ -2,6 +2,9 @@ import "./Projects.css";
 import Pokemon from "../../assets/projektBild/pokemon.png";
 import SimpleBlog from "../../assets/projektBild/BlogBild.png";
 import LoginHabits from "../../assets/projektBild/grupp9.png";
+import CarCenter from "../../assets/projektBild/milocarBild.png";
+import PlotTwist from "../../assets/projektBild/plot-twist.png";
+ 
 const projectData = [
   {
     title: "Pokemons API Explorer",
@@ -22,26 +25,24 @@ const projectData = [
   {
     title: "Login Habits Todo&Activities Event Planner",
     description:
-      "A personal portfolio layout with bold typography, project previews, and a smooth responsive experience.",
+      "A comprehensive event planning application with login functionality and habit tracking.",
     image: LoginHabits,
     demoLink: "https://grupp-9-frontend-2.vercel.app/",
     codeLink: "https://github.com/miladposhtkohi-droid/Grupp-9-Frontend_2",
   },
   {
-    title: "Task Management App",
+    title: "Car center App",
     description:
-      "A task tracker with intuitive controls, status filters, and a lightweight interface for daily planning.",
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
+      "A user-friendly application for managing car services and appointments.",
+    image: CarCenter,
     demoLink: "https://milo-car.vercel.app/",
     codeLink: "https://github.com/miladposhtkohi-droid/MiloCar",
   },
   {
-    title: "Blog Platform",
+    title: "Plot Twist",
     description:
-      "A modern content platform with article previews, clean typography, and a calm reading experience.",
-    image:
-      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80",
+      "A dynamic storytelling platform that allows users to create and share interactive narratives with a modern UI.",
+    image: PlotTwist,
     demoLink: "https://plot-twist-backend-frontend.vercel.app/pages/index.html",
     codeLink: "https://github.com/miladposhtkohi-droid/plot-twist-backend-frontend",
   },
