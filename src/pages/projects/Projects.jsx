@@ -33,8 +33,8 @@ const projectData = [
       "A task tracker with intuitive controls, status filters, and a lightweight interface for daily planning.",
     image:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
-    demoLink: "https://example.com/demo/taskapp",
-    codeLink: "https://github.com/miladposhtkohi-droid/task-management",
+    demoLink: "https://milo-car.vercel.app/",
+    codeLink: "https://github.com/miladposhtkohi-droid/MiloCar",
   },
   {
     title: "Blog Platform",
@@ -42,8 +42,8 @@ const projectData = [
       "A modern content platform with article previews, clean typography, and a calm reading experience.",
     image:
       "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80",
-    demoLink: "https://example.com/demo/blog",
-    codeLink: "https://github.com/miladposhtkohi-droid/blog-platform",
+    demoLink: "https://plot-twist-backend-frontend.vercel.app/pages/index.html",
+    codeLink: "https://github.com/miladposhtkohi-droid/plot-twist-backend-frontend",
   },
   {
     title: "Finance Tracker",
