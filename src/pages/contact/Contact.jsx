@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="contact-header">
           <div className="contact-copy">
             <p className="contact-label">{t("contact.title")}</p>
-            <h1>{t("contact.title")}</h1>
+            
             <p className="contact-subtitle">{t("contact.subtitle")}</p>
             <p className="contact-description">{t("contact.description")}</p>
             <div className="contact-actions">
