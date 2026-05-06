@@ -4,6 +4,7 @@ import SimpleBlog from "../../assets/projektBild/BlogBild.png";
 import LoginHabits from "../../assets/projektBild/grupp9.png";
 import CarCenter from "../../assets/projektBild/milocarBild.png";
 import PlotTwist from "../../assets/projektBild/plot-twist.png";
+import Portfolio from "../../assets/projektBild/portfolio.png";
  
 const projectData = [
   {
@@ -47,13 +48,12 @@ const projectData = [
     codeLink: "https://github.com/miladposhtkohi-droid/plot-twist-backend-frontend",
   },
   {
-    title: "Finance Tracker",
+    title: "portfolio project",
     description:
-      "A sleek finance dashboard that highlights transactions, spending categories, and a user-friendly overview.",
-    image:
-      "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=900&q=80",
-    demoLink: "https://example.com/demo/finance",
-    codeLink: "https://github.com/miladposhtkohi-droid/finance-tracker",
+      "A personal portfolio website showcasing my skills and projects.",
+    image: Portfolio,
+    demoLink: "https://my-portfolio-i19a.vercel.app/",
+    codeLink: "https://github.com/miladposhtkohi-droid/my-portfolio",
   },
 ];
 
