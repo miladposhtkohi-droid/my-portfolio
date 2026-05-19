@@ -1,18 +1,63 @@
-# React + Vite
+# My Portfolio - Combined Backend & Database Container
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React portfolio application with a combined backend and database in a single Docker container. The application uses file-based storage instead of SQL databases and has no Python dependencies.
 
-Currently, two official plugins are available:
+## Architecture
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend**: React with Vite
+- **Backend**: Node.js with Express
+- **Database**: File-based JSON storage (no SQL)
+- **Container**: Single Docker container running both frontend and backend
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Single container deployment
+- File-based data storage (contacts saved to JSON)
+- No SQL database required
+- No Python dependencies
+- Combined backend and frontend serving
 
-## Expanding the ESLint configuration
+## Quick Start with Docker
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Build and run with Docker Compose:
 
-# my-portfolio
+```bash
+docker-compose up --build
+```
+
+2. Access the application at `http://localhost:3000`
+
+## Development
+
+### Without Docker
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+### API Endpoints
+
+- `GET /api/health` - Health check
+- `POST /api/contact` - Save contact form data
+- `GET /api/contacts` - Retrieve all contacts (admin)
+
+## Data Storage
+
+Contact form data is stored in `/app/data/contacts.json` inside the container. When using Docker Compose, this is mounted to the local `./data` directory for persistence.
+
+## Container Structure
+
+- Frontend served from `/app/dist` (built React app)
+- Backend runs on port 3000
+- Data stored in `/app/data/` directory
+- No external database required
